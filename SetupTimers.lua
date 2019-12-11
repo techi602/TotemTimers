@@ -233,7 +233,6 @@ function TotemTimers:TotemEvent(event, arg1, arg2, arg3)
 		local name, rank, icon, castTime, minRange, maxRange, _ = GetSpellInfo(arg3)
 		spellId = TotemTimers.NameToSpellID[name]
 
-		local startTime = GetTime()
 		if spellId and TotemData[spellId] and TotemData[spellId].element == self.element then
 				self.icons[1]:SetTexture(icon)
                 self.timer.activeTotem = spellId
